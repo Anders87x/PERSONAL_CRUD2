@@ -1,0 +1,159 @@
+/*!
+ * Bracket Responsive Dashboard Template
+ * Version: 2.0.0
+ * Author: ThemePixels (@themepixels)
+ * URL: http://themepixels.me/bracket
+ *
+ * TABLE OF CONTENTS
+ *
+ * 1.   GOOGLE FONTS IMPORT
+ *
+ * 2.   BOOTSTRAP FRAMEWORK
+ *
+ * 3.   BOOTSTRAP OVERRIDES
+ *        3.1   Alerts
+ *        3.2   Buttons
+ *        3.3   Cards
+ *        3.4   Custom
+ *        3.5   Custom Forms
+ *        3.6   Forms
+ *        3.7   Form Layouts
+ *        3.8   Modal
+ *        3.9   Navigation
+ *        3.10  Pagination
+ *        3.11  Popover
+ *        3.12  Progress
+ *        3.13  Tooltip
+ *        3.14  Tables
+ *        3.15  Widgets
+ *
+ * 4.   CUSTOM VENDOR STYLES
+ *        4.1   Chartist
+ *        4.2   Codemirror
+ *        4.3   Datatables
+ *        4.4   Flot
+ *        4.5   IonRangeSlider
+ *        4.6   jQuery Steps
+ *        4.7   jQuery UI
+ *        4.8   JQVMap
+ *        4.9   Leaflet
+ *        4.10  Medium Editor
+ *        4.11  Morris
+ *        4.12  Parsley
+ *        4.13  Perfect Scrollbar
+ *        4.14  Rickshaw
+ *        4.15  Select2
+ *        4.16  Sparkline
+ *        4.17  Spectrum
+ *        4.18  Summernote
+ *        4.19  Switch Buttons
+ *        4.20  TagsInput
+ *        4.21  Toggles
+ *
+ * 5.   BRACKET PLUS CORE STYLES
+ *
+ * 6.   UTILITIES / HELPER CLASSES
+ *        6.1   Background
+ *        6.2   Border
+ *        6.3   Height
+ *        6.4   Hover
+ *        6.5   Margin
+ *        6.6   Misc
+ *        6.7   Padding
+ *        6.8   Position
+ *        6.9   Typography
+ *        6.10  Width
+ *
+**/
+
+/* ------------------------------------------------------ */
+/* ############### 1. GOOGLE FONTS IMPORT ############### */
+/* ------------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text');
+
+// Bootstrap variable overrides
+@import "bootstrap/variables";
+
+/* ------------------------------------------------------ */
+/* ############### 2. BOOTSTRAP FRAMEWORK ############### */
+/* ------------------------------------------------------ */
+@import "../bower_components/bootstrap/scss/bootstrap";
+
+// Custom mixins for bootstrap
+@import "bootstrap/mixins";
+
+/* ------------------------------------------------------ */
+/* ############### 3. BOOTSTRAP OVERRIDES ############### */
+/* ------------------------------------------------------ */
+@import "bootstrap/alerts";
+@import "bootstrap/buttons";
+@import "bootstrap/card";
+@import "bootstrap/custom";
+@import "bootstrap/custom-forms";
+@import "bootstrap/forms";
+@import "bootstrap/form-layouts";
+@import "bootstrap/modal";
+@import "bootstrap/nav";
+@import "bootstrap/pagination";
+@import "bootstrap/popover";
+@import "bootstrap/progress";
+@import "bootstrap/tooltip";
+@import "bootstrap/tables";
+@import "bootstrap/widgets";
+
+// Custom mixins for lib styles
+@import "lib/mixins";
+
+/* ------------------------------------------------------- */
+/* ############### 4. CUSTOM VENDOR STYLES ############### */
+/* ------------------------------------------------------- */
+@import "lib/chartist";
+@import "lib/codemirror";
+@import "lib/datatables";
+@import "lib/flot";
+@import "lib/ionrangeslider";
+@import "lib/jquery-steps";
+@import "lib/jqvmap";
+@import "lib/jquery-ui";
+@import "lib/leaflet";
+@import "lib/medium-editor";
+@import "lib/morris";
+@import "lib/parsley";
+@import "lib/perfect-scrollbar";
+@import "lib/rickshaw";
+@import "lib/select2";
+@import "lib/sparkline";
+@import "lib/spectrum";
+@import "lib/summernote";
+@import "lib/switchbutton";
+@import "lib/tagsinput";
+@import "lib/toggles";
+
+
+/* ----------------------------------------------------------- */
+/* ############### 5. BRACKET PLUS CORE STYLES ############### */
+/* ----------------------------------------------------------- */
+@import "app";
+
+// INTRO PAGE
+@import "intro";
+
+/* ------------------------------------------------------------- */
+/* ############### 7. UTILITIES / HELPER CLASSES ############### */
+/* ------------------------------------------------------------- */
+@import "util/background";
+@import "util/border";
+@import "util/height";
+@import "util/hover";
+@import "util/margin";
+@import "util/misc";
+@import "util/padding";
+@import "util/position";
+@import "util/typography";
+@import "util/width";

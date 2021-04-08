@@ -1,0 +1,210 @@
+/* ----------------------------------------------- */
+/* ############### 3.9 Navigation ############### */
+/* ----------------------------------------------- */
+
+// Nav
+.nav-tabs-for-dark {
+  .nav-link {
+    color: rgba(#fff, .8);
+    &.active { border-color: transparent; }
+
+    &:hover,
+    &:focus { color: #fff; }
+  }
+}
+
+// Nav Styles
+// Best to use for dropdown menu
+.nav-style-1 {
+  .nav-link {
+    color: $gray-600;
+    font-size: 13px;
+    display: block;
+    @include border-radius(2px);
+
+    &:hover,
+    &:focus {
+      background-color: $gray-200;
+      color: $gray-700;
+    }
+  }
+
+  i {
+    display: inline-block;
+    width: 20px;
+    font-size: 20px;
+    margin-right: 7px;
+    vertical-align: middle;
+    line-height: 14px;
+  }
+}
+
+.nav-style-2 {
+  .nav-link {
+    color: $gray-600;
+    font-size: 13px;
+    display: block;
+    position: relative;
+    @include transition($transition-base);
+
+    + .nav-link { border-top: 1px solid $gray-200; }
+    &:first-child { @include border-top-radius(2px); }
+    &:last-child { @include border-bottom-radius(2px); }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      bottom: -1px;
+      left: 0;
+      border-left: 3px solid $brand-info;
+      opacity: 0;
+      @include transition($transition-base);
+    }
+
+    &:hover,
+    &:focus {
+      color: $gray-700;
+      i { color: $brand-info; }
+
+      &::before { opacity: 1; }
+    }
+
+    &.active {
+      &,
+      &:hover,
+      &:focus {
+        color: $gray-700;
+        i { color: $brand-info; }
+
+        &::before { opacity: 1; }
+      }
+    }
+  }
+
+  i {
+    display: inline-block;
+    width: 20px;
+    font-size: 20px;
+    margin-right: 7px;
+    vertical-align: middle;
+    line-height: 14px;
+    color: $gray-500;
+    @include transition($transition-base);
+  }
+}
+
+
+// Nav Tabs Style
+.nav-tabs-style-1 {
+  background-color: $gray-200;
+  border: 0;
+
+  .nav-link {
+    border: 0;
+    color: $gray-600;
+    @include border-radius(0);
+
+    &:first-child { border-top-left-radius: 2px; }
+    &:last-child { border-top-right-radius: 2px; }
+
+    &.active {
+      background-color: #fff;
+      color: $gray-800;
+    }
+  }
+}
+
+
+// Nav Custom Color
+.nav-gray-600 { @include nav-color-variant($gray-600, $gray-800); }
+.nav-gray-700 { @include nav-color-variant($gray-700, $gray-900); }
+.nav-white-800 { @include nav-color-variant(rgba(#fff, .8), #fff); }
+
+.nav-pills { @include nav-color-variant($gray-700, $gray-800, #fff, transparent, $brand-info); }
+.nav-pills-for-dark { @include nav-color-variant(rgba(#fff,.7), #fff, #fff, transparent, $brand-info); }
+
+.nav.active-primary .nav-link.active { color: $brand-primary; }
+.nav.active-success .nav-link.active { color: $brand-success; }
+.nav.active-warning .nav-link.active { color: $brand-warning; }
+.nav.active-danger .nav-link.active { color: $brand-danger; }
+.nav.active-info .nav-link.active { color: $brand-info; }
+.nav.active-indigo .nav-link.active { color: $indigo; }
+.nav.active-purple .nav-link.active { color: $purple; }
+.nav.active-pink .nav-link.active { color: $pink; }
+.nav.active-teal .nav-link.active { color: $teal; }
+.nav.active-orange .nav-link.active { color: $orange; }
+
+// Advanced Navigation
+.nav-outline {
+  height: 100%;
+
+  .nav-item { height: 100%; }
+
+  .nav-link {
+    color: $gray-600;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      border-left: 3px solid $gray-800;
+      opacity: 0;
+      @include transition($transition-base);
+    }
+
+    &:hover,
+    &:focus { color: $gray-800; }
+
+    &.active {
+      &,&:hover,&:focus {
+        color: $gray-800;
+        &::before { opacity: 1; }
+      }
+    }
+  }
+
+  &.flex-row,
+  &.flex-xs-row,
+  &.flex-sm-row,
+  &.flex-md-row,
+  &.flex-lg-row,
+  &.flex-xl-row {
+    .nav-item {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .nav-link {
+      padding-left: 0;
+      padding-right: 0;
+
+      &::before {
+        border-left: 0;
+        right: 0;
+        border-bottom: 3px solid $gray-800;
+      }
+    }
+  }
+
+  // nav for dark
+  &.nav-outline-for-dark { @include nav-outline-variant(rgba(#fff,.8), #fff); }
+
+  // active color variant
+  &.active-primary  { @include nav-outline-active-variant($brand-primary); }
+  &.active-success  { @include nav-outline-active-variant($brand-success); }
+  &.active-warning  { @include nav-outline-active-variant($brand-warning); }
+  &.active-danger   { @include nav-outline-active-variant($brand-danger); }
+  &.active-info     { @include nav-outline-active-variant($brand-info); }
+  &.active-orange   { @include nav-outline-active-variant($orange); }
+  &.active-indigo   { @include nav-outline-active-variant($indigo); }
+  &.active-purple   { @include nav-outline-active-variant($purple); }
+  &.active-pink     { @include nav-outline-active-variant($pink); }
+  &.active-teal     { @include nav-outline-active-variant($teal); }
+}

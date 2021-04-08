@@ -1,0 +1,209 @@
+/* ------------------------------------------- */
+/* ############### 3.13 Tables ############### */
+/* ------------------------------------------- */
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+
+  th,
+  td {
+    &.valign-middle { vertical-align: middle; }
+  }
+
+  thead,
+  tfoot {
+    > tr > th {
+      border-top: 0;
+      border-bottom: 0;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $gray-800;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .thead-colored {
+    > tr {
+      > th,
+      > td {
+        font-weight: 500;
+        color: rgba(#fff, .75);
+        border-color: rgba(#fff, .2);
+        border-bottom-width: 0;
+        border-top-width: 0;
+
+        &:first-child { border-top-left-radius: 3px; }
+        &:last-child { border-top-right-radius: 3px; }
+      }
+    }
+
+    + tbody {
+      > tr:first-child {
+        > td,
+        > th { border-top-width: 0; }
+      }
+    }
+  }
+
+  .thead-primary { > tr { > th, > td { background-color: $brand-primary; } } }
+  .thead-success { > tr { > th, > td { background-color: $brand-success; } } }
+  .thead-warning { > tr { > th, > td { background-color: $brand-warning; } } }
+  .thead-danger  { > tr { > th, > td { background-color: $brand-danger;  } } }
+  .thead-info    { > tr { > th, > td { background-color: $brand-info;    } } }
+  .thead-teal    { > tr { > th, > td { background-color: $teal;    } } }
+  .thead-indigo  { > tr { > th, > td { background-color: $indigo;  } } }
+  .thead-purple  { > tr { > th, > td { background-color: $purple;  } } }
+  .thead-pink    { > tr { > th, > td { background-color: $pink;    } } }
+  .thead-orange  { > tr { > th, > td { background-color: $orange;  } } }
+  .thead-dark    { > tr { > th, > td { background-color: $gray-800;    } } }
+  .thead-light   {
+    > tr { > th, > td {
+      background-color: $gray-200;
+      color: $gray-800;
+    } }
+  }
+
+  tbody {
+    > tr > th {
+      color: $gray-800;
+      font-weight: 500;
+    }
+  }
+}
+
+.table-bordered {
+  border: 0;
+
+  > thead > tr {
+    > th,
+    > td {
+      border-bottom: 1px solid $gray-200;
+      border-top: 0;
+      border-right-width: 0;
+
+      &:first-child { border-left-width: 0; }
+    }
+  }
+
+  > tbody > tr {
+    > th,
+    > td {
+      border-right-width: 0;
+      border-top-width: 0;
+
+      &:first-child { border-left-width: 0; }
+    }
+
+    &:last-child {
+      > th,
+      > td {
+        border-bottom-width: 0;
+      }
+    }
+  }
+}
+
+
+// Table Full Color Variations
+.table-colored {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-width: 0;
+  @include border-radius();
+
+  > thead > tr {
+    > th,
+    > td {
+      color: rgba(#fff, .75);
+      font-weight: 500;
+      border-top: 0;
+    }
+
+    &:first-child {
+      > th,
+      > td {
+        &:first-child { border-top-left-radius: 3px; }
+        &:last-child { border-top-right-radius: 3px; }
+      }
+    }
+  }
+
+  > tbody > tr {
+    > th,
+    > td {
+      color: #fff;
+      border-color: rgba(#fff, .4);
+    }
+
+    &:first-child {
+      > th,
+      > td { border-top-width: 0; }
+    }
+
+    &:last-child {
+      > th,
+      > td { border-bottom-width: 0; }
+    }
+  }
+
+  &.table-bordered {
+    thead tr {
+      > th,
+      > td {
+        border-top: 0;
+        border-bottom: 0;
+        border-color: rgba(#fff, 0.3);
+
+        &:first-child { border-left-width: 0; }
+        &:last-child { border-right-width: 0; }
+      }
+    }
+
+    tbody tr {
+      > th,
+      > td {
+        &:first-child { border-left-width: 0; }
+        &:last-child { border-right-width: 0; }
+      }
+
+      &:last-child {
+        > th,
+        > td {
+          &:first-child { border-bottom-left-radius: 3px; }
+          &:last-child { border-bottom-right-radius: 3px; }
+        }
+      }
+    }
+  }
+}
+
+.table-valign-middle {
+  thead,
+  tbody {
+    tr {
+      th,
+      td { vertical-align: middle; }
+    }
+  }
+}
+
+
+.table-primary { @include table-full-colored-variant($brand-primary, lighten($brand-primary, 50%)); }
+.table-success { @include table-full-colored-variant($brand-success, lighten($brand-success, 50%)); }
+.table-warning { @include table-full-colored-variant($brand-warning, lighten($brand-warning, 40%)); }
+.table-danger { @include table-full-colored-variant($brand-danger, lighten($brand-danger, 40%)); }
+.table-info { @include table-full-colored-variant($brand-info, lighten($brand-info, 45%)); }
+.table-teal { @include table-full-colored-variant($teal, lighten($teal, 40%)); }
+.table-indigo { @include table-full-colored-variant($indigo, lighten($indigo, 40%)); }
+.table-purple { @include table-full-colored-variant($purple, lighten($purple, 40%)); }
+.table-pink { @include table-full-colored-variant($pink, lighten($pink, 38%)); }
+.table-orange { @include table-full-colored-variant($orange, lighten($orange, 40%)); }
+.table-dark { @include table-full-colored-variant($gray-800, $gray-300); }
+.table-light { @include table-full-colored-variant($gray-400, $gray-200);
+  > thead > tr {
+    > th,
+    > td { color: $gray-800; }
+  }
+}

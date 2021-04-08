@@ -1,0 +1,222 @@
+
+.headpanel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+  height: 70px;
+  @include transition($transition-base);
+
+  &.scroll { box-shadow: 0 1px 4px 0px rgba(#000, 0.16); }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include media-breakpoint-up(sm) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @include media-breakpoint-down(md) { max-width: none; }
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .nav {
+      background-color: #fff;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      padding: 20px 15px;
+      border-top: 1px solid $gray-200;
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        background-color: #fff;
+      }
+
+      &::before { z-index: 200; }
+
+      &::after {
+        z-index: 100;
+        bottom: -4px;
+        box-shadow: 0 1px 4px 0px rgba(#000, 0.16);
+      }
+
+      @include media-breakpoint-up(lg) {
+        flex-direction: row;
+        position: relative;
+        top: 0;
+        left: auto;
+        width: auto;
+        padding: 0;
+        border-top: 0;
+
+        &::before,
+        &::after { display: none; }
+      }
+    }
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: $gray-800;
+    position: relative;
+    top: -2px;
+
+    span {
+      color: $brand-info;
+      font-weight: normal;
+    }
+  }
+
+  .nav-link {
+    color: $gray-700;
+
+    &:hover,
+    &:focus { color: $brand-info; }
+
+    &.active {
+      &,&:hover,&:focus { color: $brand-info; }
+    }
+  }
+}
+
+.br-home-header {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+
+  .container {
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 100vh;
+    .container {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.section2 { background-color: lighten($br-primary, 5%); }
+
+.btn-outline-white {
+  border: 2px solid rgba(#fff,.7);
+  color: #fff;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  &:hover,
+  &:focus {
+    border-color: #fff;
+    color: #fff;
+  }
+}
+
+.br-demo {
+  figure {
+    position: relative;
+    background-color: #fff;
+    @include border-radius();
+    padding: 15px;
+    box-shadow: 0px 1px 3px 0px rgba(#000, 0.21);
+
+    &:hover,
+    &:focus {
+      figcaption { opacity: 1; }
+    }
+  }
+
+  figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#fff, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include border-radius();
+    @include transition($transition-base);
+    opacity: 0;
+    z-index: 10;
+
+    .btn {
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 500;
+      font-family: $font-family-montserrat;
+      padding: 12px 25px;
+      letter-spacing: 0.5px;
+      border: 0;
+    }
+  }
+}
+
+.br-foot {
+  background-color: $br-primary;
+  font-size: 13px;
+
+  .container {
+    padding: 30px 15px;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .social {
+    display: block;
+    margin-top: 10px;
+
+    @include media-breakpoint-up(md) {
+      display: inline-block;
+      margin-left: 15px;
+      margin-top: 0;
+    }
+
+    a {
+      color: rgba(#fff,0.5);
+      &:hover,
+      &:focus { color: #fff; }
+
+      + a { margin-left: 2px; }
+    }
+  }
+}
+
+.br-holder {
+  position: absolute;
+  margin-top: -70px;
+  height: 70px;
+  visibility: hidden;
+}
+
+/* Helper Class */
+.mg-t--7 { margin-top: -7px; }

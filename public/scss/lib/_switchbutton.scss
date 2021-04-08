@@ -1,0 +1,39 @@
+/* --------------------------------------------------- */
+/* ############### 4.19 Switch Buttons ############### */
+/* --------------------------------------------------- */
+
+.switch-button-label {
+  font-size: 11px;
+  &.on { color: $teal; }
+}
+
+.switch-button-background {
+  border: 0;
+  position: relative;
+  top: 0;
+  background-color: lighten($br-primary, 10%);
+  @include border-radius(2px);
+
+  // override the inline style provided by javasript
+  width: 29px !important;
+  height: 15px !important;
+
+  &.checked {
+    background-color: $teal;
+
+    .switch-button-button {
+      left: 14px !important;
+    }
+  }
+}
+
+.switch-button-button {
+  top: auto;
+  border: 0;
+  @include border-radius(2px);
+  @include transition($transition-base);
+
+  // override the inline style provided by javascript
+  top: 2px !important;
+  left: 2px !important;
+}

@@ -1,0 +1,58 @@
+/* ------------------------------------------ */
+/* ############### 3.1 Alerts ############### */
+/* ------------------------------------------ */
+
+// Base Alerts
+.alert-success {
+  @include alert-variant(lighten($brand-success, 45%), $brand-success, darken($brand-success, 8%));
+}
+
+.alert-info {
+  @include alert-variant(lighten($brand-info, 45%), $brand-info, darken($brand-info, 8%));
+}
+
+.alert-warning {
+  @include alert-variant(lighten($brand-warning, 36%), $brand-warning, darken($brand-warning, 12%));
+}
+
+.alert-danger {
+  @include alert-variant(lighten($brand-danger, 36%), $brand-danger, darken($brand-danger, 12%));
+}
+
+.alert {
+  border-width: 0;
+  padding: 15px 20px;
+  position: relative;
+
+  .close { opacity: .25; }
+}
+
+.alert-bordered {
+  border-width: 1px;
+
+  &.alert-success { background-color: lighten($state-success-bg, 18%); }
+  &.alert-info { background-color: lighten($state-info-bg, 18%); }
+  &.alert-warning { background-color: lighten($state-warning-bg, 14%); }
+  &.alert-danger { background-color: lighten($state-danger-bg, 17%); }
+}
+
+.alert-icon {
+  opacity: .95;
+  line-height: 0;
+  margin-right: 10px;
+  position: relative;
+}
+
+.alert-outline {
+  background-color: transparent;
+
+  .alert-icon {
+    float: left;
+    line-height: 0;
+    margin-right: 15px;
+  }
+
+  &.alert-success {
+    border: 1px solid $brand-success;
+  }
+}

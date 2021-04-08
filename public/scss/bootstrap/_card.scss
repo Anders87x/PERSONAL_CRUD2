@@ -1,0 +1,204 @@
+/* ----------------------------------------- */
+/* ############### 3.3 Cards ############### */
+/* ----------------------------------------- */
+
+.card-header,
+.card-footer {
+  border-color: $gray-300;
+}
+
+.card-title {
+  color: $gray-900;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.accordion {
+  .card {
+    @include border-radius(0);
+
+    + .card { border-top-width: 0; }
+    &:first-child{
+      &,
+      .card-header a { @include border-top-radius($border-radius); }
+    }
+    &:last-child {
+      &,
+      .card-header a.collapsed { @include  border-bottom-radius($border-radius); }
+    }
+  }
+
+  .card-header {
+    padding: 0;
+    background-color: transparent;
+    border-bottom-width: 0;
+
+    a {
+      display: block;
+      padding: 15px 20px;
+
+      &.collapsed {
+        &:hover,
+        &:focus { background-color: $gray-200; }
+      }
+    }
+  }
+
+  .card-body {
+    padding-top: 0;
+  }
+}
+
+.card-deck-xs {
+  .card:not(:last-child),
+  .card:not(:first-child) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .card:first-child { margin-left: 0; }
+  .card:last-child { margin-right: 0; }
+}
+
+.card-deck-sm {
+  .card:not(:last-child),
+  .card:not(:first-child) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .card:first-child { margin-left: 0; }
+  .card:last-child { margin-right: 0; }
+}
+
+.card-deck-lg {
+  .card:not(:last-child),
+  .card:not(:first-child) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .card:first-child { margin-left: 0; }
+  .card:last-child { margin-right: 0; }
+}
+
+.card-deck {
+  @media (max-width: 799px) {
+    display: block;
+    .card {
+      &:not(:last-child),
+      &:not(:first-child) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      + .card { margin-top: 20px; }
+    }
+  }
+}
+
+.card-columns {
+  .card { margin-bottom: 20px; }
+
+  @include media-breakpoint-up(sm) { column-count: 2; }
+  @include media-breakpoint-up(lg) { column-count: 3; }
+
+  &.column-count-2 {
+    @include media-breakpoint-up(sm) { column-count: 2;}
+  }
+
+  &.column-count-4 {
+    @media (min-width: 480px) { column-count: 2; }
+    @include media-breakpoint-up(md) { column-count: 3;}
+    @include media-breakpoint-up(lg) { column-count: 4; }
+  }
+
+  &.column-count-5 {
+    @media (min-width: 480px) { column-count: 2; }
+    @include media-breakpoint-up(md) { column-count: 3;}
+    @include media-breakpoint-up(lg) { column-count: 4; }
+    @include media-breakpoint-up(xl) { column-count: 5; }
+  }
+
+  &.column-count-6 {
+    @media (min-width: 480px) { column-count: 2; }
+    @include media-breakpoint-up(md) { column-count: 3;}
+    @include media-breakpoint-up(lg) { column-count: 4; }
+    @include media-breakpoint-up(xl) { column-count: 6; }
+  }
+}
+
+.card-columns-sm {
+  margin-top: -10px;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+  .card {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.card-columns-md {
+  margin-top: -20px;
+  -webkit-column-gap: 30px;
+  column-gap: 30px;
+  .card { margin-top: 20px; }
+}
+
+.card-columns-lg {
+  margin-top: -30px;
+  -webkit-column-gap: 40px;
+  column-gap: 40px;
+  .card { margin-top: 30px; }
+}
+
+.card-item-img {
+  margin-bottom: 0;
+
+  img {
+    opacity: 0.2;
+    @include transition($transition-base);
+  }
+
+  &:hover,
+  &:focus {
+    img { opacity: 0.5; }
+  }
+}
+
+
+// Card With Navigation
+.card-header-tabs {
+  flex-direction: column;
+  .nav-link {
+    &.active {
+      &,
+      &:hover,
+      &:focus {
+        background-color: #fff;
+        border: 1px solid $gray-300;
+        color: $gray-800;
+        @include border-radius();
+      }
+    }
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+    }
+  }
+
+  @media (min-width: 480px) {
+    flex-direction: row;
+    .nav-link {
+      &.active {
+        &,
+        &:hover,
+        &:focus {
+          background-color: #fff;
+          border-bottom-color: #fff;
+          color: $gray-800;
+          @include border-bottom-radius(0);
+        }
+      }
+    }
+  }
+}

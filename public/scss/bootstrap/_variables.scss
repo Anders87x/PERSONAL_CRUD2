@@ -1,0 +1,67 @@
+
+$body-bg:                       #E9ECEF;
+$body-color:                    #868ba1;
+
+// Border
+$border-radius:                 3px;
+
+// Color
+$orange:                        #f27510;
+$teal:                          #00b297;
+
+$brand-primary:                 #0866C6;
+$brand-success:                 #23bf08;
+$brand-warning:                 #f49917;
+$brand-danger:                  #DC3545;
+$brand-info:                    #17A2B8;
+
+// Forms elements
+$input-btn-padding-y:           0.65rem;
+
+// Custom Forms
+$ckbox-size:                    16px;
+$rdiobox-size:                  16px;
+
+// Form states and alerts
+$state-success-bg:              lighten($brand-success, 40%);
+$state-success-border:          lighten($brand-success, 35%);
+
+$state-info-bg:                 lighten($brand-primary, 40%);
+$state-info-border:             lighten($brand-primary, 35px);
+
+$state-warning-bg:              lighten($brand-warning, 30%);
+$state-warning-border:          lighten($brand-warning, 25%);
+
+$state-danger-bg:               lighten($brand-danger, 25%);
+$state-danger-border:           lighten($brand-danger, 20%);
+
+// Fonts
+$font-family-hind:              'Hind', 'Helvetica Neue', Arial, sans-serif;
+$font-family-firasans:          'Fira Sans', 'Helvetica Neue', Arial, sans-serif;
+$font-family-roboto:            'Roboto', 'Helvetica Neue', Arial, sans-serif;
+$font-family-poppins:           'Poppins', 'Helvetica Neue', Arial, sans-serif;
+$font-family-source:            'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+$font-family-montserrat:        'Montserrat', 'Fira Sans', 'Helvetica Neue', Arial, sans-serif;
+$font-family-lato:              'Lato', 'Helvetica Neue', Arial, sans-serif;
+$font-family-barcode:           'Libre Barcode 39 Extended Text', cursive;
+
+$font-family-base:              $font-family-roboto;
+$font-size-base:                .875rem;
+
+// Links
+$link-hover-decoration:         none;
+
+// Table
+$table-border-color:            #dee2e6;
+
+// CUSTOM VARIABLES NOT BELONG TO BOOTSTRAP //
+$br-header-height:              60px;
+$br-header-bg:                  #fff;
+$br-sideleft-width:             230px;
+$br-subleft-width:              230px;
+$br-sideright-width:            280px;
+
+$br-primary:                    #1D2939;
+$blue:                          #0866C6;
+$green:                         #23BF08;
+$yellow:                        #F49917;

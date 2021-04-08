@@ -1,0 +1,66 @@
+/* -------------------------------------------------- */
+/* ############### 4.5 IonRangeSlider ############### */
+/* -------------------------------------------------- */
+
+.irs-min, .irs-max {
+  font-family: $font-family-roboto;
+  @include border-radius(1px);
+}
+
+.irs-from, .irs-to, .irs-single {
+  font-family: $font-family-roboto;
+  background-color: $brand-info;
+  @include border-radius(1px);
+}
+
+.irs-bar {
+  background-image: none;
+  background-color: $brand-info;
+}
+
+.irs-bar-edge {
+  background-image: none;
+  background-color: $brand-info;
+  @include border-left-radius(2px);
+}
+
+.irs-line-left {
+  background-image: none;
+  background-color: $gray-300;
+  @include border-left-radius(2px);
+}
+
+.irs-line-mid {
+  background-image: none;
+  background-color: $gray-300;
+}
+
+.irs-line-right {
+  background-image: none;
+  background-color: $gray-300;
+  @include border-right-radius(2px);
+}
+
+.irs-from::after, .irs-to::after,
+.irs-single::after {
+	border-top-color: $brand-info;
+}
+
+.irs-slider {
+  background-image: none;
+
+  &:before {
+    content: '';
+    width: 2px;
+    height: 18px;
+    position: absolute;
+    background-color: $brand-info;
+    left: 50%;
+    margin-left: -1px;
+  }
+
+  &:hover,
+  &:focus {
+    &:before { background-color: darken($brand-info, 12%); }
+  }
+}
