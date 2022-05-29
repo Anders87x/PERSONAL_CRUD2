@@ -39,6 +39,8 @@
     <link href="../../public/lib/datatables/jquery.dataTables.css" rel="stylesheet">
     <link href="../../public/datatables/buttons.dataTables.min.css" rel="stylesheet"/>
 
+    <link href="../../public/lib/select2/css/select2.min.css" rel="stylesheet">
+
     <!-- Bracket CSS -->
     <link rel="stylesheet" href="../../public/css/bracket.css">
   </head>
@@ -698,8 +700,10 @@
               <table id="producto_data" class="table display responsive nowrap">
                 <thead>
                   <tr>
+                    <th class="wd-15p">Categoria</th>
                     <th class="wd-15p">Nombre</th>
                     <th class="wd-15p">Descripcion</th>
+                    <th class="wd-15p">Cant.</th>
                     <th class="wd-15p"></th>
                     <th class="wd-20p"></th>
                   </tr>
@@ -736,6 +740,8 @@
     <script src="../../public/datatables/jszip.min.js"></script>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script src="../../public/lib/select2/js/select2.min.js"></script>
 
     <script type="text/javascript" src="mntproducto.js"></script>
   </body>
