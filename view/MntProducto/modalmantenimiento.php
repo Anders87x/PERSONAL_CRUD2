@@ -12,6 +12,11 @@
                         <label class="form-label" for="prod_nom">Nombre</label>
                         <input type="text" class="form-control" id="prod_nom" name="prod_nom" placeholder="Ingrese Nombre" required>
                     </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="prod_desc">Descripcion</label>
+                        <input type="text" class="form-control" id="prod_desc" name="prod_desc" placeholder="Ingrese Descripcion" required>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Cerrar</button>
